@@ -5,31 +5,7 @@ const About = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-wheat-bg py-20 relative overflow-hidden">
-        {/* Vine decorative elements */}
-        <div className="absolute inset-0 pointer-events-none">
-          <img 
-            src="/vine.svg" 
-            alt="" 
-            className="absolute left-0 top-16 w-24 h-40 opacity-12 transform -rotate-12"
-            style={{ transform: 'translateX(-30%) translateY(10%) rotate(-15deg)' }}
-          />
-          <img 
-            src="/vine.svg" 
-            alt="" 
-            className="absolute right-0 bottom-20 w-20 h-36 opacity-8 transform rotate-12 scaleX(-1)"
-            style={{ transform: 'translateX(25%) translateY(-15%) rotate(15deg) scaleX(-1)' }}
-          />
-        </div>
-        
-        {/* Decorative elements */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-12 right-16 w-24 h-24 border border-olive rounded-full"></div>
-          <div className="absolute bottom-16 left-12 w-16 h-16 border border-gold rounded-full"></div>
-          <div className="absolute top-1/3 left-1/4 w-6 h-6 bg-olive/30 rounded-full"></div>
-          <div className="absolute bottom-1/3 right-1/4 w-4 h-4 bg-gold/30 rounded-full"></div>
-        </div>
-        
+      <section className="bg-wheat-bg py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="font-fraunces font-semibold text-4xl lg:text-5xl text-primary-ink mb-6">
@@ -56,9 +32,12 @@ const About = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Billy Patterson */}
             <div className="bg-wheat-bg p-8 rounded-2xl text-center">
-              <div className="w-32 h-32 bg-olive/20 rounded-full mx-auto mb-6 flex items-center justify-center">
-                <Users className="text-olive" size={64} />
-                <span className="sr-only">Professional headshot placeholder</span>
+              <div className="w-32 h-32 mx-auto mb-6 overflow-hidden rounded-full">
+                <img 
+                  src="/src/assets/images/billy-patterson-headshot.jpg" 
+                  alt="Billy Patterson headshot" 
+                  className="w-full h-full object-cover"
+                />
               </div>
               <h3 className="font-fraunces font-semibold text-2xl text-primary-ink mb-4">
                 Billy Patterson
@@ -70,9 +49,12 @@ const About = () => {
 
             {/* Kelly Patterson */}
             <div className="bg-sky-callout p-8 rounded-2xl text-center">
-              <div className="w-32 h-32 bg-gold/20 rounded-full mx-auto mb-6 flex items-center justify-center">
-                <Heart className="text-gold" size={64} />
-                <span className="sr-only">Professional headshot placeholder</span>
+              <div className="w-32 h-32 mx-auto mb-6 overflow-hidden rounded-full">
+                <img 
+                  src="/src/assets/images/kelly-patterson-headshot.jpg" 
+                  alt="Kelly Patterson headshot" 
+                  className="w-full h-full object-cover"
+                />
               </div>
               <h3 className="font-fraunces font-semibold text-2xl text-primary-ink mb-4">
                 Kelly Patterson

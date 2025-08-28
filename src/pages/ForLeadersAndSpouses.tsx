@@ -5,30 +5,7 @@ const ForLeadersAndSpouses = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-wheat-bg py-20 relative overflow-hidden">
-        {/* Vine decorative elements */}
-        <div className="absolute inset-0 pointer-events-none">
-          <img 
-            src="/vine.svg" 
-            alt="" 
-            className="absolute left-0 top-1/4 w-32 h-64 opacity-15 transform -translate-x-4"
-            style={{ transform: 'translateX(-20%) translateY(25%) rotate(-10deg)' }}
-          />
-          <img 
-            src="/vine.svg" 
-            alt="" 
-            className="absolute right-0 bottom-1/4 w-24 h-48 opacity-10 transform translate-x-4 rotate-180"
-            style={{ transform: 'translateX(20%) translateY(-25%) rotate(170deg) scaleX(-1)' }}
-          />
-        </div>
-        
-        {/* Decorative elements */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-16 left-8 w-40 h-40 border-2 border-olive/20 rounded-full"></div>
-          <div className="absolute bottom-24 right-12 w-32 h-32 border-2 border-gold/20 rounded-full"></div>
-          <div className="absolute top-1/2 left-1/4 w-20 h-20 border border-olive/30 rounded-full"></div>
-        </div>
-        
+      <section className="bg-wheat-bg py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="font-fraunces font-semibold text-4xl lg:text-5xl text-primary-ink mb-6">
@@ -47,12 +24,31 @@ const ForLeadersAndSpouses = () => {
 
       {/* How We Walk With You Section */}
       <section className="py-20 bg-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+            <div>
+              <h2 className="font-fraunces font-semibold text-3xl text-primary-ink mb-6">
+                A Partnership Focused on Your Health
+              </h2>
+              <div className="w-16 h-0.5 bg-gold mb-8"></div>
+              <p className="text-lg text-slate-secondary leading-relaxed">
+                Through regular visits and intentional prayer, we provide spiritual leaders with constant, 
+                faithful friendship that focuses on abiding in Christ, healthy leadership, and strong families.
+              </p>
+            </div>
+            <div className="lg:order-first">
+              <img 
+                src="/src/assets/images/praying-intently.jpg" 
+                alt="Prayer focused mentorship" 
+                className="w-full h-80 object-cover rounded-2xl shadow-lg"
+              />
+            </div>
+          </div>
+          
           <div className="text-center mb-16">
-            <h2 className="font-fraunces font-semibold text-3xl text-primary-ink mb-6">
-              A Partnership Focused on Your Health
-            </h2>
-            <div className="w-16 h-0.5 bg-gold mx-auto"></div>
+            <h3 className="font-fraunces font-semibold text-2xl text-primary-ink mb-6">
+              How We Walk With You
+            </h3>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
