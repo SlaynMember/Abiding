@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import Header from './components/Header';
 import Home from './pages/Home';
 import About from './pages/About';
-import HowWeHelp from './pages/HowWeHelp';
-import OurWorkChurches from './pages/OurWorkChurches';
+import ForLeadersAndSpouses from './pages/ForLeadersAndSpouses';
+import ForChurchesAndTeams from './pages/ForChurchesAndTeams';
 import Values from './pages/Values';
 import PastorsWeWalkWith from './pages/PastorsWeWalkWith';
 import StoriesTestimonials from './pages/StoriesTestimonials';
@@ -22,9 +22,9 @@ function App() {
       case 'about':
         return <About />;
       case 'our-work-leaders':
-        return <HowWeHelp />;
+        return <ForLeadersAndSpouses />;
       case 'our-work-churches':
-        return <OurWorkChurches />;
+        return <ForChurchesAndTeams />;
       case 'values':
         return <Values />;
       case 'pastors':
