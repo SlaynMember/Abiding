@@ -1,258 +1,479 @@
-import React from 'react';
-import { Users, Heart, BookOpen, Phone, ArrowRight, CheckCircle } from 'lucide-react';
+import React, { useState } from 'react';
+import { Heart, DollarSign, Users, Target, Calendar, CreditCard, Check } from 'lucide-react';
 
-const Home = () => {
+const Give = () => {
+  const [selectedAmount, setSelectedAmount] = useState('100');
+  const [giftType, setGiftType] = useState('one-time');
+  const [customAmount, setCustomAmount] = useState('');
+
+  const predefinedAmounts = ['25', '50', '100', '250', '500', '1000'];
+  const impactAreas = [
+    {
+      icon: Heart,
+      title: "General Support",
+      description: "Supports all aspects of our ministry to pastors and their families"
+    },
+    {
+      icon: Users,
+      title: "Family Care Fund",
+      description: "Specific support for pastoral families in crisis or transition"
+    },
+    {
+      icon: Target,
+      title: "Leadership Development",
+      description: "Training and resources for emerging pastoral leaders"
+    },
+    {
+      icon: Calendar,
+      title: "Crisis Response",
+      description: "Emergency support for pastors facing unexpected challenges"
+    }
+  ];
+
   return (
     <div>
-      {/* Hero Section with Background Image */}
-      <section className="relative min-h-screen flex items-center justify-center">
-        {/* Background Image */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: 'url(/src/assets/images/hero-main.jpg)' }}
-        />
-        
-        {/* Dark Overlay for Text Contrast */}
-        <div className="absolute inset-0 bg-black/40" />
-        
-        {/* Hero Content */}
-        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="font-fraunces font-semibold text-5xl lg:text-7xl text-white mb-8 leading-tight">
-            Spiritual Mentorship for <span className="text-gold">Ministry Leaders</span>
-          </h1>
-          <p className="text-xl lg:text-2xl text-white/90 max-w-4xl mx-auto mb-12 leading-relaxed">
-            Faithful friendship, prayer, and guidance for pastors and Christian leaders who want to serve well while maintaining healthy families and sustainable ministry.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <button className="bg-gold text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-gold/90 transition-colors flex items-center justify-center space-x-2">
-              <Phone size={20} />
-              <span>Book a Conversation</span>
-            </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-primary-ink transition-colors">
-              Learn About Our Work
-            </button>
+      {/* Hero Section */}
+      <section className="bg-wheat-bg py-20 relative overflow-hidden">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="font-fraunces font-semibold text-4xl lg:text-5xl text-primary-ink mb-6">
+              Partner in the Work of <span className="text-gold">Restoring Leaders</span>
+            </h1>
+            <div className="w-16 h-0.5 bg-gold mx-auto mb-8"></div>
+            <p className="text-xl text-slate-secondary max-w-4xl mx-auto leading-relaxed">
+              Your generosity provides the steady friendship, prayer, and practical help that sustains pastors and their families for the long haul. You can make a one-time gift or set up a recurring gift. We are grateful for every partner who helps us strengthen leaders, families, and churches.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* The Challenge Section */}
+      {/* The Impact Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="font-fraunces font-semibold text-3xl text-primary-ink mb-6">
+              How Your Partnership Makes a Difference
+            </h2>
+            <div className="w-16 h-0.5 bg-gold mx-auto"></div>
+          </div>
+
+          <div className="bg-sky-callout p-8 rounded-2xl">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              <div>
+                <blockquote className="font-fraunces text-xl lg:text-2xl text-primary-ink mb-6 italic leading-relaxed">
+                  "The necessary travel, time, and resourcing for this relationship has always been provided for by Billy and his supporters. I highly endorse and recommend your continued and increased support of this work."
+                </blockquote>
+                <div className="mb-6">
+                  <cite className="text-slate-secondary font-medium">— Nathan Kollar, Lead Pastor, GraceLand Church Franklin</cite>
+                </div>
+                <p className="text-lg text-slate-secondary leading-relaxed">
+                  Your gift of any amount directly enables this kind of life-changing, on-the-ground support.
+                </p>
+              </div>
+              <div className="lg:order-first">
+                <img 
+                  src="/src/assets/images/billy-meeting-thailand.jpg" 
+                  alt="Billy meeting with ministry leaders in Thailand" 
+                  className="w-full h-80 object-cover rounded-2xl shadow-lg"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Impact and Information */}
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+            <div className="bg-sky-callout p-8 rounded-2xl">
+              <h3 className="font-fraunces font-semibold text-2xl text-primary-ink mb-6">
+                Impact by the Numbers
+              </h3>
+              <div className="space-y-4">
+                <div className="flex justify-between items-center">
+                  <span className="text-slate-secondary">Pastors currently supported:</span>
+                  <span className="font-semibold text-gold text-xl">150+</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-slate-secondary">Families receiving care:</span>
+                  <span className="font-semibold text-gold text-xl">400+</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-slate-secondary">Crisis interventions (2024):</span>
+                  <span className="font-semibold text-gold text-xl">47</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-slate-secondary">Still serving in ministry:</span>
+                  <span className="font-semibold text-gold text-xl">95%</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-wheat-bg p-8 rounded-2xl">
+              <h3 className="font-fraunces font-semibold text-2xl text-primary-ink mb-6">
+                What Your Monthly Gift Provides
+              </h3>
+              <div className="space-y-4 text-slate-secondary">
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-gold rounded-full mt-2 flex-shrink-0"></div>
+                  <div>
+                    <p className="font-medium">$25/month</p>
+                    <p className="text-sm">Resources and materials for one pastoral family</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-gold rounded-full mt-2 flex-shrink-0"></div>
+                  <div>
+                    <p className="font-medium">$50/month</p>
+                    <p className="text-sm">Monthly mentorship sessions for one pastor</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-gold rounded-full mt-2 flex-shrink-0"></div>
+                  <div>
+                    <p className="font-medium">$100/month</p>
+                    <p className="text-sm">Comprehensive family support including marriage care</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-gold rounded-full mt-2 flex-shrink-0"></div>
+                  <div>
+                    <p className="font-medium">$250/month</p>
+                    <p className="text-sm">Full partnership support for pastoral family in crisis</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Giving Form */}
+      <section className="bg-sky-callout py-20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="font-fraunces font-semibold text-3xl text-primary-ink mb-6">
+              Make Your Secure Gift
+            </h2>
+            <div className="w-16 h-0.5 bg-gold mx-auto mb-6"></div>
+            <p className="text-lg text-slate-secondary">
+              Choose your gift amount and frequency to support pastoral families today.
+            </p>
+          </div>
+
+          <div className="bg-white rounded-2xl p-8 lg:p-12 shadow-lg">
+            {/* Gift Type Selection */}
+            <div className="mb-8">
+              <h3 className="font-semibold text-primary-ink mb-4">Gift Type</h3>
+              <div className="flex space-x-4">
+                <button
+                  onClick={() => setGiftType('monthly')}
+                  className={`flex-1 py-3 px-6 rounded-lg border-2 font-medium transition-colors ${
+                    giftType === 'monthly'
+                      ? 'border-gold bg-gold/10 text-gold'
+                      : 'border-gray-300 text-slate-secondary hover:border-gold/50'
+                  }`}
+                >
+                  Monthly Partnership
+                </button>
+                <button
+                  onClick={() => setGiftType('one-time')}
+                  className={`flex-1 py-3 px-6 rounded-lg border-2 font-medium transition-colors ${
+                    giftType === 'one-time'
+                      ? 'border-gold bg-gold/10 text-gold'
+                      : 'border-gray-300 text-slate-secondary hover:border-gold/50'
+                  }`}
+                >
+                  One-Time Gift
+                </button>
+              </div>
+            </div>
+
+            {/* Amount Selection */}
+            <div className="mb-8">
+              <h3 className="font-semibold text-primary-ink mb-4">
+                Gift Amount {giftType === 'monthly' && '(per month)'}
+              </h3>
+              <div className="grid grid-cols-3 md:grid-cols-6 gap-3 mb-4">
+                {predefinedAmounts.map(amount => (
+                  <button
+                    key={amount}
+                    onClick={() => {
+                      setSelectedAmount(amount);
+                      setCustomAmount('');
+                    }}
+                    className={`py-3 px-4 rounded-lg border-2 font-medium transition-colors ${
+                      selectedAmount === amount && !customAmount
+                        ? 'border-gold bg-gold/10 text-gold'
+                        : 'border-gray-300 text-slate-secondary hover:border-gold/50'
+                    }`}
+                  >
+                    ${amount}
+                  </button>
+                ))}
+              </div>
+              <div className="flex items-center space-x-2">
+                <span className="text-slate-secondary">Custom amount: $</span>
+                <input
+                  type="number"
+                  value={customAmount}
+                  onChange={(e) => {
+                    setCustomAmount(e.target.value);
+                    setSelectedAmount('');
+                  }}
+                  placeholder="Enter amount"
+                  className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold focus:border-transparent"
+                />
+              </div>
+            </div>
+
+            {/* Impact Area */}
+            <div className="mb-8">
+              <h3 className="font-semibold text-primary-ink mb-4">Direct Your Gift</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {impactAreas.map((area, index) => {
+                  const IconComponent = area.icon;
+                  return (
+                    <label key={index} className="flex items-start space-x-3 p-4 border border-gray-300 rounded-lg cursor-pointer hover:border-gold/50 transition-colors">
+                      <input type="radio" name="impact" className="mt-1" />
+                      <div className="flex items-start space-x-3">
+                        <div className="w-8 h-8 bg-gold/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                          <IconComponent className="text-gold" size={16} />
+                        </div>
+                        <div>
+                          <p className="font-medium text-primary-ink">{area.title}</p>
+                          <p className="text-sm text-slate-secondary">{area.description}</p>
+                        </div>
+                      </div>
+                    </label>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Donor Information */}
+            <div className="mb-8">
+              <h3 className="font-semibold text-primary-ink mb-4">Your Information</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-sm font-medium text-slate-secondary mb-2">
+                    First Name
+                  </label>
+                  <input
+                    type="text"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold focus:border-transparent"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-slate-secondary mb-2">
+                    Last Name
+                  </label>
+                  <input
+                    type="text"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold focus:border-transparent"
+                  />
+                </div>
+                <div className="md:col-span-2">
+                  <label className="block text-sm font-medium text-slate-secondary mb-2">
+                    Email Address
+                  </label>
+                  <input
+                    type="email"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold focus:border-transparent"
+                  />
+                </div>
+                <div className="md:col-span-2">
+                  <label className="block text-sm font-medium text-slate-secondary mb-2">
+                    Mailing Address (optional, for receipts)
+                  </label>
+                  <textarea
+                    rows={3}
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold focus:border-transparent"
+                    placeholder="Street address, City, State, ZIP"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Payment Method */}
+            <div className="mb-8">
+              <h3 className="font-semibold text-primary-ink mb-4">Payment Method</h3>
+              <div className="space-y-4">
+                <label className="flex items-center space-x-3 p-4 border border-gray-300 rounded-lg cursor-pointer hover:border-gold/50 transition-colors">
+                  <input type="radio" name="payment" defaultChecked />
+                  <CreditCard className="text-gold" size={20} />
+                  <span>Credit/Debit Card</span>
+                </label>
+                <label className="flex items-center space-x-3 p-4 border border-gray-300 rounded-lg cursor-pointer hover:border-gold/50 transition-colors">
+                  <input type="radio" name="payment" />
+                  <DollarSign className="text-gold" size={20} />
+                  <span>Bank Transfer (ACH)</span>
+                </label>
+              </div>
+            </div>
+
+            {/* Gift Summary */}
+            <div className="bg-wheat-bg p-6 rounded-lg mb-8">
+              <h3 className="font-semibold text-primary-ink mb-4">Gift Summary</h3>
+              <div className="space-y-2">
+                <div className="flex justify-between">
+                  <span className="text-slate-secondary">Gift Type:</span>
+                  <span className="font-medium text-primary-ink capitalize">{giftType.replace('-', ' ')}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-slate-secondary">Amount:</span>
+                  <span className="font-medium text-primary-ink">
+                    ${customAmount || selectedAmount}{giftType === 'monthly' ? '/month' : ''}
+                  </span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-slate-secondary">Processing Fee:</span>
+                  <span className="font-medium text-primary-ink">Covered by Abiding Partners</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Submit */}
+            <button className="w-full bg-gold text-white py-4 rounded-lg font-semibold text-lg hover:bg-gold/90 transition-colors flex items-center justify-center space-x-2">
+              <Heart size={20} />
+              <span>
+                {giftType === 'monthly' ? 'Start Monthly Partnership' : 'Partner with Us Today'}
+              </span>
+            </button>
+
+            <p className="text-sm text-slate-secondary text-center mt-4">
+              Your gift is secure and will be processed through our encrypted payment system. 
+              You will receive a receipt via email for tax purposes.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Other Ways to Give */}
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="font-fraunces font-semibold text-3xl lg:text-4xl text-primary-ink mb-6">
-              The Reality of Ministry Leadership
+            <h2 className="font-fraunces font-semibold text-3xl text-primary-ink mb-6">
+              Other Ways to Support
             </h2>
-            <div className="w-16 h-0.5 bg-gold mx-auto mb-8"></div>
-            <p className="text-xl text-slate-secondary max-w-4xl mx-auto leading-relaxed">
-              Ministry leadership can be isolating, overwhelming, and demanding. Many pastors and Christian leaders struggle with burnout, family tension, and the weight of carrying others' burdens while having few places to find support for their own.
-            </p>
+            <div className="w-16 h-0.5 bg-gold mx-auto"></div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center p-6">
+            <div className="bg-wheat-bg p-8 rounded-xl text-center">
               <div className="w-16 h-16 bg-olive/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Users className="text-olive" size={32} />
+                <Check className="text-olive" size={32} />
               </div>
               <h3 className="font-fraunces font-semibold text-xl text-primary-ink mb-4">
-                Isolation & Loneliness
+                Legacy Giving
               </h3>
-              <p className="text-slate-secondary leading-relaxed">
-                Many leaders feel deeply alone, carrying burdens without trusted friends who understand their unique challenges.
+              <p className="text-slate-secondary leading-relaxed mb-4">
+                Include Abiding Partners in your estate planning to create lasting 
+                impact for future generations of pastoral families.
               </p>
+              <button className="text-gold hover:text-gold/80 transition-colors font-medium">
+                Learn More About Legacy Gifts
+              </button>
             </div>
 
-            <div className="text-center p-6">
+            <div className="bg-sky-callout p-8 rounded-xl text-center">
               <div className="w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Heart className="text-gold" size={32} />
+                <Users className="text-gold" size={32} />
               </div>
               <h3 className="font-fraunces font-semibold text-xl text-primary-ink mb-4">
-                Family-Ministry Tension
+                Corporate Partnership
               </h3>
-              <p className="text-slate-secondary leading-relaxed">
-                The perceived choice between ministry success and family health creates stress and guilt for many pastoral families.
+              <p className="text-slate-secondary leading-relaxed mb-4">
+                Partner with us as a business to support pastoral families while 
+                demonstrating your commitment to community leaders.
               </p>
+              <button className="text-gold hover:text-gold/80 transition-colors font-medium">
+                Explore Corporate Partnership
+              </button>
             </div>
 
-            <div className="text-center p-6">
-              <div className="w-16 h-16 bg-sky-500/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <BookOpen className="text-sky-500" size={32} />
+            <div className="bg-white border-2 border-gold/20 p-8 rounded-xl text-center">
+              <div className="w-16 h-16 bg-primary-ink/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Heart className="text-primary-ink" size={32} />
               </div>
               <h3 className="font-fraunces font-semibold text-xl text-primary-ink mb-4">
-                Lack of Mentorship
+                Memorial & Honor Gifts
               </h3>
-              <p className="text-slate-secondary leading-relaxed">
-                Few leaders have experienced genuine spiritual parenting—long-term, patient, unconditional support from seasoned mentors.
+              <p className="text-slate-secondary leading-relaxed mb-4">
+                Honor a loved one or celebrate a special occasion by supporting 
+                pastoral families in their name.
               </p>
+              <button className="text-gold hover:text-gold/80 transition-colors font-medium">
+                Make a Memorial Gift
+              </button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* The Hope Section */}
-      <section className="bg-sky-callout py-20">
+      {/* Transparency & Stewardship */}
+      <section className="bg-wheat-bg py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="font-fraunces font-semibold text-3xl lg:text-4xl text-primary-ink mb-6">
-              But There's Hope
+          <div className="text-center mb-12">
+            <h2 className="font-fraunces font-semibold text-3xl text-primary-ink mb-6">
+              Financial Stewardship
             </h2>
-            <div className="w-16 h-0.5 bg-gold mx-auto mb-8"></div>
-            <p className="text-xl text-slate-secondary max-w-4xl mx-auto leading-relaxed">
-              Throughout decades of ministry, we've seen that living as a Christian leader is more than doable—although not without hardship and challenges, it's a life full of joy. Through spiritual parenting, we've witnessed transformation in pastors, elders, and ministry professionals who have learned to operate from their love relationship with Jesus.
-            </p>
+            <div className="w-16 h-0.5 bg-gold mx-auto"></div>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h3 className="font-fraunces font-semibold text-2xl text-primary-ink mb-6">
-                What We Provide
+                How We Use Your Gifts
               </h3>
-              <div className="space-y-4">
-                <div className="flex items-start space-x-3">
-                  <CheckCircle className="text-gold mt-1 flex-shrink-0" size={20} />
-                  <div>
-                    <h4 className="font-semibold text-primary-ink">Consistent Prayer & Friendship</h4>
-                    <p className="text-slate-secondary">Regular, faithful intercession and genuine relationship</p>
-                  </div>
+              <p className="text-lg text-slate-secondary mb-6 leading-relaxed">
+                We maintain the highest standards of financial stewardship, ensuring 
+                every dollar directly impacts the pastors and families we serve.
+              </p>
+              <div className="space-y-4 text-slate-secondary">
+                <div className="flex justify-between items-center">
+                  <span>Direct pastoral support & mentorship:</span>
+                  <span className="font-semibold text-gold">75%</span>
                 </div>
-                <div className="flex items-start space-x-3">
-                  <CheckCircle className="text-gold mt-1 flex-shrink-0" size={20} />
-                  <div>
-                    <h4 className="font-semibold text-primary-ink">Spiritual Mentorship</h4>
-                    <p className="text-slate-secondary">Wise guidance rooted in decades of ministry experience</p>
-                  </div>
+                <div className="flex justify-between items-center">
+                  <span>Resource development & materials:</span>
+                  <span className="font-semibold text-gold">15%</span>
                 </div>
-                <div className="flex items-start space-x-3">
-                  <CheckCircle className="text-gold mt-1 flex-shrink-0" size={20} />
-                  <div>
-                    <h4 className="font-semibold text-primary-ink">Family Support</h4>
-                    <p className="text-slate-secondary">Care that extends to spouses and children</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <CheckCircle className="text-gold mt-1 flex-shrink-0" size={20} />
-                  <div>
-                    <h4 className="font-semibold text-primary-ink">Crisis Response</h4>
-                    <p className="text-slate-secondary">Immediate support during difficult seasons</p>
-                  </div>
+                <div className="flex justify-between items-center">
+                  <span>Administrative & operational costs:</span>
+                  <span className="font-semibold text-gold">10%</span>
                 </div>
               </div>
             </div>
 
             <div className="bg-white p-8 rounded-2xl shadow-lg">
-              <blockquote className="font-fraunces text-xl text-primary-ink mb-6 italic leading-relaxed">
-                "I have been profoundly impacted by the steady friendship, prayer, and guidance I have received. I highly recommend continued and increased support for this work."
-              </blockquote>
-              <cite className="text-slate-secondary font-medium">
-                — Nathan Kollar, Lead Pastor, GraceLand Church Franklin
-              </cite>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Our Approach Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="font-fraunces font-semibold text-3xl lg:text-4xl text-primary-ink mb-6">
-              How We Walk With You
-            </h2>
-            <div className="w-16 h-0.5 bg-gold mx-auto mb-8"></div>
-            <p className="text-lg text-slate-secondary max-w-3xl mx-auto">
-              Our approach is relational, not transactional. We believe in the power of presence, 
-              consistent prayer, and long-term commitment to your growth and flourishing.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-wheat-bg p-8 rounded-xl">
-              <h3 className="font-fraunces font-semibold text-xl text-primary-ink mb-4">
-                For Leaders & Spouses
+              <h3 className="font-fraunces font-semibold text-xl text-primary-ink mb-6">
+                Our Commitment to Donors
               </h3>
-              <p className="text-slate-secondary mb-6 leading-relaxed">
-                Personal spiritual mentorship focused on your relationship with Jesus, 
-                your leadership development, and your family's health and flourishing.
-              </p>
-              <button className="text-gold hover:text-gold/80 transition-colors font-medium flex items-center space-x-2">
-                <span>Learn More</span>
-                <ArrowRight size={16} />
-              </button>
+              <ul className="space-y-3 text-slate-secondary">
+                <li className="flex items-start space-x-3">
+                  <Check className="text-gold mt-1 flex-shrink-0" size={16} />
+                  <span>Annual financial reports provided to all donors</span>
+                </li>
+                <li className="flex items-start space-x-3">
+                  <Check className="text-gold mt-1 flex-shrink-0" size={16} />
+                  <span>Independent financial review and accountability</span>
+                </li>
+                <li className="flex items-start space-x-3">
+                  <Check className="text-gold mt-1 flex-shrink-0" size={16} />
+                  <span>Regular impact updates on pastoral families served</span>
+                </li>
+                <li className="flex items-start space-x-3">
+                  <Check className="text-gold mt-1 flex-shrink-0" size={16} />
+                  <span>Easy cancellation of recurring gifts anytime</span>
+                </li>
+                <li className="flex items-start space-x-3">
+                  <Check className="text-gold mt-1 flex-shrink-0" size={16} />
+                  <span>Personal communication about how gifts are used</span>
+                </li>
+              </ul>
             </div>
-
-            <div className="bg-sky-callout p-8 rounded-xl">
-              <h3 className="font-fraunces font-semibold text-xl text-primary-ink mb-4">
-                For Churches & Teams
-              </h3>
-              <p className="text-slate-secondary mb-6 leading-relaxed">
-                Leadership development and team discipleship to strengthen your church's 
-                ministry from the inside out through healthy, sustainable practices.
-              </p>
-              <button className="text-gold hover:text-gold/80 transition-colors font-medium flex items-center space-x-2">
-                <span>Learn More</span>
-                <ArrowRight size={16} />
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="bg-primary-ink text-white py-20">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="font-fraunces font-semibold text-3xl lg:text-4xl mb-6">
-              Faithful Partnership Over Time
-            </h2>
-            <div className="w-16 h-0.5 bg-gold mx-auto"></div>
-          </div>
-
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-4xl lg:text-5xl font-fraunces font-semibold text-gold mb-2">
-                150+
-              </div>
-              <p className="text-gray-300">Pastors Supported</p>
-            </div>
-            <div>
-              <div className="text-4xl lg:text-5xl font-fraunces font-semibold text-gold mb-2">
-                25+
-              </div>
-              <p className="text-gray-300">Years Experience</p>
-            </div>
-            <div>
-              <div className="text-4xl lg:text-5xl font-fraunces font-semibold text-gold mb-2">
-                95%
-              </div>
-              <p className="text-gray-300">Still in Ministry</p>
-            </div>
-            <div>
-              <div className="text-4xl lg:text-5xl font-fraunces font-semibold text-gold mb-2">
-                6
-              </div>
-              <p className="text-gray-300">States Served</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Final CTA */}
-      <section className="bg-wheat-bg py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-fraunces font-semibold text-3xl lg:text-4xl text-primary-ink mb-6">
-            Ready to Begin the Conversation?
-          </h2>
-          <p className="text-xl text-slate-secondary mb-8 leading-relaxed">
-            Every partnership begins with a simple, confidential conversation. We'd love to 
-            hear your story and explore how we might walk alongside you in faithful friendship.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gold text-white px-8 py-4 rounded-full font-semibold hover:bg-gold/90 transition-colors flex items-center justify-center space-x-2">
-              <Phone size={20} />
-              <span>Book Your First Conversation</span>
-            </button>
-            <button className="border-2 border-primary-ink text-primary-ink px-8 py-4 rounded-full font-semibold hover:bg-primary-ink hover:text-white transition-colors">
-              Learn About Our Heart & Story
-            </button>
           </div>
         </div>
       </section>
@@ -260,4 +481,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Give;
