@@ -4,16 +4,16 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'fraunces': ['Fraunces', 'serif'],
-        'inter': ['Inter', 'sans-serif'],
+        'fraunces': ['Lora', 'serif'],
+        'inter': ['Open Sans', 'sans-serif'],
       },
       colors: {
-        'primary-ink': '#0E1726',
-        'olive': '#3E4E3B',
-        'wheat-bg': '#E9E2D0',
-        'gold': '#C89B3C',
-        'sky-callout': '#DDE7F6',
-        'slate-secondary': '#5B6B7A',
+        'primary-ink': '#005B64',
+        'olive': '#5E7C60',
+        'wheat-bg': '#F5F1E9',
+        'gold': '#C86B52',
+        'sky-callout': '#E6EFF0',
+        'slate-secondary': '#3D4042',
       },
       spacing: {
         '18': '4.5rem',

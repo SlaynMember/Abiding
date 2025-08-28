@@ -1,16 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@600&family=Open+Sans:wght@400;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@600&family=Inter:wght@400;600&display=swap');
-
 @layer base {
   body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Open Sans', sans-serif;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Fraunces', serif;
+    font-family: 'Lora', serif;
   }
 }
 
