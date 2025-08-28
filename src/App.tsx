@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Header from './components/Header';
 import Home from './pages/Home';
-import OurStory from './pages/OurStory';
+import About from './pages/About';
 import HowWeHelp from './pages/HowWeHelp';
 import OurWorkChurches from './pages/OurWorkChurches';
 import Values from './pages/Values';
@@ -20,7 +20,7 @@ function App() {
       case 'home':
         return <Home />;
       case 'about':
-        return <OurStory />;
+        return <About />;
       case 'our-work-leaders':
         return <HowWeHelp />;
       case 'our-work-churches':
