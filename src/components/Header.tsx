@@ -203,7 +203,6 @@ const Header: React.FC<HeaderProps> = ({ currentPage, setCurrentPage }) => {
             >
               Connect
             </button>
-            ))}
           </div>
         </div>
       )}
