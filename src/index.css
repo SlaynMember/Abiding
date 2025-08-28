@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@600&family=Inter:wght@400;600&display=swap');
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Fraunces', serif;
+  }
+}
+
+/* Custom vine decorations and animations */
+@layer components {
+  .vine-decoration {
+    position: relative;
+  }
+  
+  .vine-decoration::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border: 1px solid theme('colors.olive.DEFAULT');
+    border-radius: 50%;
+    opacity: 0.3;
+  }
+  
+  .vine-accent {
+    background: linear-gradient(45deg, 
+      theme('colors.olive.DEFAULT'), 
+      theme('colors.gold.DEFAULT')
+    );
+    opacity: 0.6;
+  }
+  
+  /* Subtle animation for vine elements */
+  .vine-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-3px) rotate(1deg); }
+  }
+  
+  /* Vine SVG styling enhancements */
+  .vine-decoration img {
+    filter: sepia(20%) saturate(80%) hue-rotate(75deg);
+    transition: opacity 0.3s ease;
+  }
+  
+  .vine-decoration:hover img {
+    opacity: 0.15;
+  }
+  
+  /* Responsive vine scaling */
+  @media (max-width: 768px) {
+    .vine-decoration img {
+      width: 75% !important;
+      height: 75% !important;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .vine-decoration img {
+      width: 60% !important;
+      height: 60% !important;
+    }
+  }
+}
