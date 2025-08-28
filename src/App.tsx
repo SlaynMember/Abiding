@@ -9,7 +9,7 @@ import PastorsWeWalkWith from './pages/PastorsWeWalkWith';
 import StoriesTestimonials from './pages/StoriesTestimonials';
 import Resources from './pages/Resources';
 import Give from './pages/Give';
-import Contact from './pages/Contact';
+import Connect from './pages/Connect';
 import Footer from './components/Footer';
 
 function App() {
@@ -36,7 +36,7 @@ function App() {
       case 'give':
         return <Give />;
       case 'connect':
-        return <Contact />;
+        return <Connect />;
       default:
         return <Home />;
     }
