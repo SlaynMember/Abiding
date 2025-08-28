@@ -1,216 +1,249 @@
 import React, { useState } from 'react';
-import { BookOpen, Download, ExternalLink, Search, Filter, Video, FileText, Headphones } from 'lucide-react';
+import { BookOpen, Calendar, Tag, Mail, Phone } from 'lucide-react';
 
 const Resources = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [selectedCategory, setSelectedCategory] = useState('All Posts');
 
-  const categories = ['All', 'Marriage & Family', 'Leadership', 'Spiritual Formation', 'Practical Ministry', 'Crisis Support'];
+  const categories = ['All Posts', 'Leadership & Burnout', 'Marriage & Family', 'Abiding in Christ', 'Prayer'];
 
-  const resources = [
+  // Mock article data - this will be replaced with real content later
+  const articles = [
     {
       id: 1,
-      title: "Healthy Boundaries for Pastoral Families",
-      description: "A comprehensive guide to establishing and maintaining boundaries that protect both ministry effectiveness and family relationships.",
-      type: "PDF Guide",
-      category: "Marriage & Family",
-      icon: FileText,
-      downloadable: true,
-      featured: true
+      title: "Navigating the First Signs of Burnout",
+      category: "Leadership & Burnout",
+      date: "August 28, 2025",
+      excerpt: "Burnout doesn't happen overnight. It's a slow fade that often begins with subtle shifts in our heart and habits. Learning to recognize these early warning signs can be the difference between a season of struggle and a complete breakdown."
     },
     {
       id: 2,
-      title: "The Pastor's Marriage: Thriving in Ministry Together",
-      description: "Video series featuring real pastoral couples discussing how they've navigated the unique challenges of marriage in ministry.",
-      type: "Video Series",
+      title: "Protecting Your Marriage in a Ministry Crisis",
       category: "Marriage & Family",
-      icon: Video,
-      downloadable: false,
-      featured: true
+      date: "August 21, 2025",
+      excerpt: "In the midst of a church crisis, the first casualty is often the health of our own homes. Here are three vital practices that can help you guard your marriage when ministry demands threaten to overwhelm your family life."
     },
     {
       id: 3,
-      title: "Leading from Spiritual Health",
-      description: "Audio teachings on maintaining personal spiritual vitality while serving others in leadership capacity.",
-      type: "Audio",
-      category: "Spiritual Formation",
-      icon: Headphones,
-      downloadable: true,
-      featured: false
+      title: "The Daily Rhythm of Abiding",
+      category: "Abiding in Christ",
+      date: "August 14, 2025",
+      excerpt: "Jesus calls us to abide in Him, but what does that actually look like in the everyday rhythms of ministry life? This simple framework has helped hundreds of pastors cultivate a sustainable practice of staying connected to the vine."
     },
     {
       id: 4,
-      title: "Church Conflict Resolution Framework",
-      description: "Step-by-step process for addressing and resolving conflicts within church leadership and congregation.",
-      type: "Resource Kit",
-      category: "Leadership",
-      icon: FileText,
-      downloadable: true,
-      featured: false
+      title: "When Prayer Feels Like Work",
+      category: "Prayer",
+      date: "August 7, 2025",
+      excerpt: "There are seasons when prayer becomes another item on our ministry to-do list rather than a life-giving conversation with our Father. If you're struggling to find joy in prayer, you're not alone—and you're not broken."
     },
     {
       id: 5,
-      title: "Sabbatical Planning Guide",
-      description: "Complete framework for planning, proposing, and maximizing a pastoral sabbatical for spiritual and family renewal.",
-      type: "Planning Guide",
-      category: "Practical Ministry",
-      icon: FileText,
-      downloadable: true,
-      featured: true
+      title: "Leading When You're Running on Empty",
+      category: "Leadership & Burnout",
+      date: "July 31, 2025",
+      excerpt: "Every leader faces seasons where the demands exceed their capacity. The question isn't whether these seasons will come, but how we'll navigate them with integrity and hope when they do."
     },
     {
       id: 6,
-      title: "Crisis Communication Templates",
-      description: "Ready-to-use communication templates for various crisis situations pastors may face in ministry.",
-      type: "Template Pack",
-      category: "Crisis Support",
-      icon: FileText,
-      downloadable: true,
-      featured: false
+      title: "Creating Margin for Your Family",
+      category: "Marriage & Family",
+      date: "July 24, 2025",
+      excerpt: "Ministry families often struggle with the tension between serving others and caring for those closest to them. Here's how to build sustainable rhythms that honor both your calling and your family."
     },
     {
       id: 7,
-      title: "Biblical Foundations of Pastoral Leadership",
-      description: "In-depth study of Scripture's teaching on pastoral calling, character, and competence.",
-      type: "Study Guide",
-      category: "Leadership",
-      icon: BookOpen,
-      downloadable: true,
-      featured: false
+      title: "Finding God in the Silence",
+      category: "Abiding in Christ",
+      date: "July 17, 2025",
+      excerpt: "Sometimes God feels distant, especially in the midst of ministry challenges. This doesn't mean He's absent—it often means He's inviting us deeper into trust and dependency."
     },
     {
       id: 8,
-      title: "Raising Children in Ministry Families",
-      description: "Practical wisdom for parents in ministry on raising healthy, faithful children in the unique context of pastoral life.",
-      type: "Parent Guide",
-      category: "Marriage & Family",
-      icon: FileText,
-      downloadable: true,
-      featured: false
+      title: "Praying for Your People When You're Hurting",
+      category: "Prayer",
+      date: "July 10, 2025",
+      excerpt: "How do we intercede for our congregations when we're dealing with our own pain and struggles? This paradox of pastoral care requires both honesty about our limitations and trust in God's sufficiency."
     }
   ];
 
-  const filteredResources = resources.filter(resource => {
-    const matchesSearch = resource.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         resource.description.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory === 'All' || resource.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  });
+  const filteredArticles = selectedCategory === 'All Posts' 
+    ? articles 
+    : articles.filter(article => article.category === selectedCategory);
 
-  const featuredResources = resources.filter(resource => resource.featured);
+  const getCategoryColor = (category: string) => {
+    switch (category) {
+      case 'Leadership & Burnout':
+        return 'bg-olive/10 text-olive';
+      case 'Marriage & Family':
+        return 'bg-gold/10 text-gold';
+      case 'Abiding in Christ':
+        return 'bg-sky-500/10 text-sky-500';
+      case 'Prayer':
+        return 'bg-primary-ink/10 text-primary-ink';
+      default:
+        return 'bg-gray-100 text-slate-secondary';
+    }
+  };
 
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-wheat-bg py-20">
-        {/* Vine elements suggesting growth through resources */}
-        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+      <section className="bg-wheat-bg py-20 relative overflow-hidden">
+        {/* Vine decorative elements */}
+        <div className="absolute inset-0 pointer-events-none">
           <img 
             src="/vine.svg" 
             alt="" 
-            className="absolute left-0 top-16 w-26 h-42 opacity-9"
-            style={{ transform: 'translateX(-32%) rotate(-10deg)' }}
+            className="absolute left-0 top-16 w-28 h-44 opacity-10"
+            style={{ transform: 'translateX(-35%) rotate(-6deg)' }}
           />
           <img 
             src="/vine.svg" 
             alt="" 
-            className="absolute right-0 top-1/3 w-22 h-38 opacity-7 scaleX(-1)"
-            style={{ transform: 'translateX(28%) rotate(8deg) scaleX(-1)' }}
+            className="absolute right-0 bottom-20 w-24 h-40 opacity-8 scaleX(-1)"
+            style={{ transform: 'translateX(30%) rotate(12deg) scaleX(-1)' }}
           />
+        </div>
+        
+        {/* Decorative elements */}
+        <div className="absolute inset-0 opacity-6">
+          <div className="absolute top-12 right-16 w-32 h-32 border border-olive/25 rounded-full"></div>
+          <div className="absolute bottom-16 left-12 w-20 h-20 border border-gold/25 rounded-full"></div>
+          <div className="absolute top-1/3 left-1/4 w-12 h-12 border border-olive/30 rounded-full"></div>
+          <div className="absolute bottom-1/3 right-1/4 w-8 h-8 bg-gold/20 rounded-full"></div>
         </div>
         
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="font-fraunces font-semibold text-4xl lg:text-5xl text-primary-ink mb-6">
-              <span className="text-gold">Resources</span>
+              The <span className="text-gold">Abiding Word</span>
             </h1>
             <div className="w-16 h-0.5 bg-gold mx-auto mb-8"></div>
+            <p className="text-xl text-slate-secondary max-w-4xl mx-auto leading-relaxed">
+              Weekly Biblical encouragement and practical wisdom for your journey in ministry and life.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Resource Categories */}
+      {/* Blog Content Section */}
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-wheat-bg p-8 rounded-xl text-center">
-              <div className="w-16 h-16 bg-olive/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <BookOpen className="text-olive" size={32} />
-              </div>
-              <h3 className="font-fraunces font-semibold text-xl text-primary-ink mb-4">
-                Devotionals and Abiding Tools
-              </h3>
-              <p className="text-slate-secondary leading-relaxed">
-                Simple, scripture centered tools that help you return to abiding and lead from love.
-              </p>
-            </div>
-
-            <div className="bg-sky-callout p-8 rounded-xl text-center">
-              <div className="w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <FileText className="text-gold" size={32} />
-              </div>
-              <h3 className="font-fraunces font-semibold text-xl text-primary-ink mb-4">
-                Newsletter Archive
-              </h3>
-              <p className="text-slate-secondary leading-relaxed">
-                An organized library of weekly encouragements.
-              </p>
-            </div>
-
-            <div className="bg-white border-2 border-olive/20 p-8 rounded-xl text-center">
-              <div className="w-16 h-16 bg-sky-500/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Headphones className="text-sky-500" size={32} />
-              </div>
-              <h3 className="font-fraunces font-semibold text-xl text-primary-ink mb-4">
-                Privacy and Care
-              </h3>
-              <p className="text-slate-secondary leading-relaxed">
-                We honor confidentiality. Sensitive conversations are never recorded. We protect trust by keeping private matters private and by seeking consent before sharing.
-              </p>
+          {/* Filtering Controls */}
+          <div className="mb-12">
+            <div className="flex flex-wrap gap-4 justify-center">
+              {categories.map((category) => (
+                <button
+                  key={category}
+                  onClick={() => setSelectedCategory(category)}
+                  className={`px-6 py-3 rounded-full font-medium transition-colors ${
+                    selectedCategory === category
+                      ? 'bg-gold text-white'
+                      : 'bg-gray-100 text-slate-secondary hover:bg-gold/10 hover:text-gold'
+                  }`}
+                >
+                  {category}
+                </button>
+              ))}
             </div>
           </div>
+
+          {/* Article Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredArticles.map((article) => (
+              <div key={article.id} className="bg-white border border-gray-200 shadow-md rounded-xl p-6 hover:shadow-lg transition-shadow">
+                {/* Category Tag */}
+                <div className="flex items-center justify-between mb-4">
+                  <span className={`inline-flex items-center space-x-1 px-3 py-1 rounded-full text-sm font-medium ${getCategoryColor(article.category)}`}>
+                    <Tag size={12} />
+                    <span>{article.category}</span>
+                  </span>
+                </div>
+
+                {/* Article Title */}
+                <h3 className="font-fraunces font-semibold text-xl text-primary-ink mb-3 leading-tight">
+                  {article.title}
+                </h3>
+
+                {/* Date */}
+                <div className="flex items-center space-x-2 mb-4 text-slate-secondary text-sm">
+                  <Calendar size={14} />
+                  <span>{article.date}</span>
+                </div>
+
+                {/* Excerpt */}
+                <p className="text-slate-secondary leading-relaxed mb-6">
+                  {article.excerpt}
+                </p>
+
+                {/* Read More Link */}
+                <button className="text-gold hover:text-gold/80 transition-colors font-medium flex items-center space-x-2">
+                  <span>Read More</span>
+                  <BookOpen size={16} />
+                </button>
+              </div>
+            ))}
+          </div>
+
+          {/* Show message if no articles match filter */}
+          {filteredArticles.length === 0 && (
+            <div className="text-center py-12">
+              <p className="text-slate-secondary text-lg">
+                No articles found in this category. Check back soon for new content!
+              </p>
+            </div>
+          )}
         </div>
       </section>
 
-      {/* Newsletter Section */}
+      {/* Newsletter Subscription Section */}
       <section className="bg-wheat-bg py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="font-fraunces font-semibold text-3xl text-primary-ink mb-6">
-              Subscribe to Weekly Encouragement
+              Get Encouragement Delivered Weekly
             </h2>
             <div className="w-16 h-0.5 bg-gold mx-auto mb-6"></div>
-            <p className="text-slate-secondary">
-              We will only use your email to send encouragement and resources. Unsubscribe anytime.
+            <p className="text-lg text-slate-secondary max-w-2xl mx-auto leading-relaxed">
+              Subscribe to receive new articles from "The Abiding Word" directly in your inbox. 
+              No spam, just a simple, honest note to point you back to Jesus.
             </p>
           </div>
 
-          <div className="max-w-md mx-auto">
-            <div className="flex space-x-2">
-              <input
-                type="email"
-                placeholder="Your email address"
-                className="flex-1 px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent"
-              />
-              <button className="bg-gold text-white px-6 py-3 rounded-lg font-medium hover:bg-gold/90 transition-colors">
-                Subscribe
+          <div className="bg-white p-8 rounded-2xl shadow-lg max-w-2xl mx-auto">
+            <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex-1">
+                <input
+                  type="email"
+                  placeholder="Your email address"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent"
+                />
+              </div>
+              <button className="bg-gold text-white px-8 py-3 rounded-lg font-semibold hover:bg-gold/90 transition-colors flex items-center justify-center space-x-2">
+                <Mail size={20} />
+                <span>Subscribe</span>
               </button>
             </div>
+            <p className="text-sm text-slate-secondary mt-4">
+              We respect your inbox. Unsubscribe anytime with one click.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Call to Action */}
+      {/* Final Call to Action */}
       <section className="bg-primary-ink text-white py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-fraunces font-semibold text-3xl lg:text-4xl mb-6">
             Book a Conversation
           </h2>
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            We would love to meet you, listen, and pray.
+            Ready to move beyond reading about faithful leadership to experiencing it firsthand? 
+            We'd love to hear your story and explore how we might walk together.
           </p>
-          <button className="bg-gold text-primary-ink px-8 py-4 rounded-full font-semibold hover:bg-gold/90 transition-colors">
-            Book a Conversation
+          <button className="bg-gold text-primary-ink px-8 py-4 rounded-full font-semibold hover:bg-gold/90 transition-colors flex items-center justify-center space-x-2 mx-auto">
+            <Phone size={20} />
+            <span>Book Your First Conversation</span>
           </button>
         </div>
       </section>
