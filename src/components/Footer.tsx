@@ -56,9 +56,9 @@ const Footer: React.FC<FooterProps> = ({ setCurrentPage }) => {
           <div>
             <h4 className="font-medium mb-4">Ministry</h4>
             <ul className="space-y-2">
-              <li><button onClick={() => setCurrentPage('our-story')} className="text-gray-300 hover:text-gold transition-colors">Our Story</button></li>
-              <li><button onClick={() => setCurrentPage('how-we-help')} className="text-gray-300 hover:text-gold transition-colors">How We Help</button></li>
-              <li><button onClick={() => setCurrentPage('values')} className="text-gray-300 hover:text-gold transition-colors">Values</button></li>
+              <li><button onClick={() => setCurrentPage('about')} className="text-gray-300 hover:text-gold transition-colors">About</button></li>
+              <li><button onClick={() => setCurrentPage('our-work-leaders')} className="text-gray-300 hover:text-gold transition-colors">For Leaders & Spouses</button></li>
+              <li><button onClick={() => setCurrentPage('our-work-churches')} className="text-gray-300 hover:text-gold transition-colors">For Churches & Teams</button></li>
               <li><button onClick={() => setCurrentPage('resources')} className="text-gray-300 hover:text-gold transition-colors">Resources</button></li>
             </ul>
           </div>
@@ -69,7 +69,7 @@ const Footer: React.FC<FooterProps> = ({ setCurrentPage }) => {
             <ul className="space-y-3">
               <li>
                 <button 
-                  onClick={() => setCurrentPage('contact')}
+                  onClick={() => setCurrentPage('connect')}
                   className="flex items-center space-x-2 text-gray-300 hover:text-gold transition-colors"
                 >
                   <Phone size={16} />
@@ -87,7 +87,7 @@ const Footer: React.FC<FooterProps> = ({ setCurrentPage }) => {
               </li>
               <li>
                 <button 
-                  onClick={() => setCurrentPage('stories')}
+                  onClick={() => setCurrentPage('connect')}
                   className="flex items-center space-x-2 text-gray-300 hover:text-gold transition-colors"
                 >
                   <Mail size={16} />

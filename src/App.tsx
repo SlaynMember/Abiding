@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Home from './pages/Home';
 import OurStory from './pages/OurStory';
 import HowWeHelp from './pages/HowWeHelp';
+import OurWorkChurches from './pages/OurWorkChurches';
 import Values from './pages/Values';
 import PastorsWeWalkWith from './pages/PastorsWeWalkWith';
 import StoriesTestimonials from './pages/StoriesTestimonials';
@@ -18,10 +19,12 @@ function App() {
     switch (currentPage) {
       case 'home':
         return <Home />;
-      case 'our-story':
+      case 'about':
         return <OurStory />;
-      case 'how-we-help':
+      case 'our-work-leaders':
         return <HowWeHelp />;
+      case 'our-work-churches':
+        return <OurWorkChurches />;
       case 'values':
         return <Values />;
       case 'pastors':
@@ -32,7 +35,7 @@ function App() {
         return <Resources />;
       case 'give':
         return <Give />;
-      case 'contact':
+      case 'connect':
         return <Contact />;
       default:
         return <Home />;

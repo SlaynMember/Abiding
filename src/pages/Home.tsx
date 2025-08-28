@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heart, Users, BookOpen, Phone, ArrowRight, MapPin } from 'lucide-react';
+import { Heart, Users, BookOpen, ArrowRight } from 'lucide-react';
 
 const Home = () => {
   return (
@@ -22,7 +22,6 @@ const Home = () => {
           />
         </div>
         
-        {/* Decorative vine pattern */}
         {/* Enhanced decorative vine pattern */}
         <div className="absolute inset-0 opacity-8">
           {/* Large vine circles */}
@@ -43,19 +42,16 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 relative">
           <div className="text-center">
             <h1 className="font-fraunces font-semibold text-4xl lg:text-6xl text-primary-ink mb-6 leading-tight">
-              Faithful Friendship for<br />
-              <span className="text-gold">Ministry Leaders</span>
+              Leading can be lonely.<br />
+              <span className="text-gold">You don't have to do it alone.</span>
             </h1>
             <div className="w-16 h-0.5 bg-gold mx-auto mb-6"></div>
             <p className="text-xl text-slate-secondary max-w-3xl mx-auto mb-8 leading-relaxed">
-              At Abiding Partners, we believe every pastor deserves a spiritual parent—
-              someone to walk alongside them with wisdom, encouragement, and unwavering support 
-              for both their ministry and family.
+              Spiritual parenting for Christian leaders navigating the pressures of ministry and life.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gold text-white px-8 py-4 rounded-full font-semibold hover:bg-gold/90 transition-colors flex items-center justify-center space-x-2">
-                <Phone size={20} />
-                <span>Book a Conversation</span>
+              <button className="bg-gold text-white px-8 py-4 rounded-full font-semibold hover:bg-gold/90 transition-colors">
+                Begin the Conversation
               </button>
               <button className="bg-white text-primary-ink px-8 py-4 rounded-full font-semibold border-2 border-primary-ink hover:bg-primary-ink hover:text-white transition-colors">
                 Learn Our Story
@@ -65,7 +61,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Scripture Callout */}
+      {/* The "Why" (Spiritual Parenting) Section */}
       <section className="bg-sky-callout py-12 relative overflow-hidden">
         {/* Subtle vine border decoration */}
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-olive/30 to-transparent"></div>
@@ -73,22 +69,22 @@ const Home = () => {
         
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <blockquote className="font-fraunces text-2xl lg:text-3xl text-olive font-medium italic leading-relaxed">
-            "I do not write these things to shame you, but as my beloved children I warn you. For though you might have ten thousand instructors in Christ, yet you do not have many fathers. For in Christ Jesus I have begotten you through the gospel. Therefore I urge you, imitate me."
+            "I do not write these things to shame you, but as my beloved children I warn you. For though you might have ten thousand instructors in Christ, yet you do not have many fathers; for in Christ Jesus I have begotten you through the gospel. Therefore I urge you, imitate me."
           </blockquote>
           <cite className="block mt-4 text-slate-secondary font-medium">1 Corinthians 4:14-16</cite>
         </div>
       </section>
 
-      {/* How We Help Section */}
+      {/* The Solution (What We Do) Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="font-fraunces font-semibold text-3xl lg:text-4xl text-primary-ink mb-4">
-              What We Do
+              A Relationship of Presence, Prayer, and Wisdom
             </h2>
             <div className="w-16 h-0.5 bg-gold mx-auto mb-6"></div>
             <p className="text-lg text-slate-secondary max-w-3xl mx-auto">
-              Spiritual parenting, steady check-ins, and practical help for leaders, families, and teams. We come alongside pastors and Christian leaders with presence, prayer, and wisdom that keeps the focus on abiding in Jesus, healthy leadership, and family responsibilities.
+              Gleaning from decades of ministry experience, we offer practical spiritual help through a relationship, not a program. We come alongside pastors and Christian leaders with:
             </p>
           </div>
 
@@ -98,10 +94,10 @@ const Home = () => {
                 <Heart className="text-olive" size={32} />
               </div>
               <h3 className="font-fraunces font-semibold text-xl text-primary-ink mb-4">
-                Prayer and Covering
+                Faithful Prayer
               </h3>
               <p className="text-slate-secondary leading-relaxed">
-                Regular visits and safe friendship that keeps the focus on abiding, leadership, and family responsibilities
+                Consistent, confidential prayer for you, your family, and your ministry
               </p>
             </div>
 
@@ -110,10 +106,10 @@ const Home = () => {
                 <Users className="text-gold" size={32} />
               </div>
               <h3 className="font-fraunces font-semibold text-xl text-primary-ink mb-4">
-                Support for Spouses and Key Leaders
+                Intentional Support
               </h3>
               <p className="text-slate-secondary leading-relaxed">
-                Training for eldering and practical systems that hold up under real life
+                Mentorship and training for you, your spouse, and your key leaders to build systems that last
               </p>
             </div>
 
@@ -122,17 +118,17 @@ const Home = () => {
                 <BookOpen className="text-primary-ink" size={32} />
               </div>
               <h3 className="font-fraunces font-semibold text-xl text-primary-ink mb-4">
-                How We Walk With You
+                Honest Wisdom
               </h3>
               <p className="text-slate-secondary leading-relaxed">
-                Regular visits and safe friendship that keeps the focus on abiding, leadership, and family responsibilities
+                A safe space to seek wisdom for church leadership needs, process challenges, and sharpen your calling
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Testimonial Preview */}
+      {/* Social Proof (Testimonials) Section */}
       <section className="bg-wheat-bg py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -160,80 +156,18 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Cities We Serve */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="font-fraunces font-semibold text-2xl text-primary-ink mb-4">
-              Trusted Relationships
-            </h2>
-            <div className="w-16 h-0.5 bg-gold mx-auto"></div>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            {[
-              { city: 'Phoenix', state: 'AZ', pastor: 'Jared and Marci Doe', church: 'Desert City Church' },
-              { city: 'San Antonio', state: 'TX', pastor: 'Scott and Shannon Austin', church: 'The Park Community' },
-              { city: 'Franklin', state: 'TN', pastor: 'Nathan and Jessica Kollar', church: 'GraceLand Church' },
-              { city: 'Tampa', state: 'FL', pastor: 'Michael and Val Kyker', church: 'Journey Church' },
-              { city: 'McKinney', state: 'TX', pastor: 'Kyle and Tessa Redel', church: 'The Park Church' },
-              { city: 'Brooklyn', state: 'NY', pastor: 'Caleb and Allison Clardy', church: 'Trinity Grace Church' }
-            ].map((location) => (
-              <div key={location.city} className="text-center">
-                <div className="w-4 h-4 bg-gold rounded-full mx-auto mb-2"></div>
-                <h3 className="font-medium text-primary-ink">{location.city}</h3>
-                <p className="text-sm text-slate-secondary">{location.state}</p>
-                <p className="text-xs text-slate-secondary mt-1">{location.pastor}</p>
-                <p className="text-xs text-slate-secondary">{location.church}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Call to Action */}
+      {/* Final Call to Action Section */}
       <section className="bg-primary-ink text-white py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-fraunces font-semibold text-3xl lg:text-4xl mb-6">
             Ready for a Conversation?
           </h2>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gold text-primary-ink px-8 py-4 rounded-full font-semibold hover:bg-gold/90 transition-colors flex items-center justify-center space-x-2">
-              <Phone size={20} />
-              <span>Book a Conversation</span>
-            </button>
-            <button className="border-2 border-gold text-gold px-8 py-4 rounded-full font-semibold hover:bg-gold hover:text-primary-ink transition-colors">
-              Support the Work
-            </button>
-          </div>
-        </div>
-      </section>
-
-      {/* Newsletter Section */}
-      <section className="bg-wheat-bg py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-fraunces font-semibold text-3xl text-primary-ink mb-6">
-            Weekly Biblical Encouragement
-          </h2>
-          <div className="w-16 h-0.5 bg-gold mx-auto mb-6"></div>
-          <p className="text-lg text-slate-secondary mb-8 max-w-2xl mx-auto">
-            Weekly biblical encouragement in abiding. Simple, honest notes that point you back to Jesus and help you lead from your love relationship with Him.
+          <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+            Through regular visits and check-ins, we provide spiritual leaders a constant, faithful and safe friendship which focuses on abiding, leadership and family responsibilities.
           </p>
-          <div className="max-w-md mx-auto">
-            <div className="flex space-x-2">
-              <input
-                type="email"
-                placeholder="Your email address"
-                className="flex-1 px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent"
-              />
-              <button className="bg-gold text-white px-6 py-3 rounded-lg font-medium hover:bg-gold/90 transition-colors">
-                Subscribe
-              </button>
-            </div>
-            <p className="text-xs text-slate-secondary mt-3">
-              Subscribe to weekly encouragement
-            </p>
-          </div>
+          <button className="bg-gold text-primary-ink px-8 py-4 rounded-full font-semibold hover:bg-gold/90 transition-colors">
+            Book Your First Conversation
+          </button>
         </div>
       </section>
     </div>
