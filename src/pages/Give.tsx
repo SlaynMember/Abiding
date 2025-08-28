@@ -64,29 +64,35 @@ const Give = () => {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="font-fraunces font-semibold text-4xl lg:text-5xl text-primary-ink mb-6">
-              <span className="text-gold">Support the Work</span>
+              Partner in the Work of <span className="text-gold">Restoring Leaders</span>
             </h1>
             <div className="w-16 h-0.5 bg-gold mx-auto mb-8"></div>
             <p className="text-xl text-slate-secondary max-w-4xl mx-auto leading-relaxed">
-              Your giving fuels steady friendship, prayer, and practical help for pastors and leaders. You can make a one time gift or set up a recurring gift. We are grateful for every partner who helps us strengthen leaders, families, churches, and cities.
+              Your generosity provides the steady friendship, prayer, and practical help that sustains pastors and their families for the long haul. You can make a one-time gift or set up a recurring gift. We are grateful for every partner who helps us strengthen leaders, families, and churches.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Endorsement Highlight */}
+      {/* The Impact Section */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="font-fraunces font-semibold text-3xl text-primary-ink mb-6">
-              Endorsement Highlight
+              How Your Partnership Makes a Difference
             </h2>
             <div className="w-16 h-0.5 bg-gold mx-auto"></div>
           </div>
 
           <div className="bg-sky-callout p-8 rounded-2xl">
+            <blockquote className="font-fraunces text-xl lg:text-2xl text-primary-ink mb-6 italic leading-relaxed text-center">
+              "The necessary travel, time, and resourcing for this relationship has always been provided for by Billy and his supporters. I highly endorse and recommend your continued and increased support of this work."
+            </blockquote>
+            <div className="text-center mb-6">
+              <cite className="text-slate-secondary font-medium">— Nathan Kollar, Lead Pastor, GraceLand Church Franklin</cite>
+            </div>
             <p className="text-lg text-slate-secondary text-center leading-relaxed">
-              We are grateful for the support and encouragement we receive from pastors and leaders who know our work firsthand.
+              Your gift of any amount directly enables this kind of life-changing, on-the-ground support.
             </p>
           </div>
         </div>
@@ -164,7 +170,7 @@ const Give = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="font-fraunces font-semibold text-3xl text-primary-ink mb-6">
-              Make Your Gift
+              Make Your Secure Gift
             </h2>
             <div className="w-16 h-0.5 bg-gold mx-auto mb-6"></div>
             <p className="text-lg text-slate-secondary">
@@ -348,7 +354,7 @@ const Give = () => {
             <button className="w-full bg-gold text-white py-4 rounded-lg font-semibold text-lg hover:bg-gold/90 transition-colors flex items-center justify-center space-x-2">
               <Heart size={20} />
               <span>
-                {giftType === 'monthly' ? 'Start Monthly Partnership' : 'Complete Gift'}
+                {giftType === 'monthly' ? 'Start Monthly Partnership' : 'Partner with Us Today'}
               </span>
             </button>
 
@@ -484,28 +490,6 @@ const Give = () => {
                 </li>
               </ul>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Call to Action */}
-      <section className="bg-primary-ink text-white py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-fraunces font-semibold text-3xl lg:text-4xl mb-6">
-            Partner with Us Today
-          </h2>
-          <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Your partnership enables us to walk alongside pastoral families with the 
-            kind of patient, long-term support that creates lasting transformation. 
-            Join us in this vital ministry.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gold text-primary-ink px-8 py-4 rounded-full font-semibold hover:bg-gold/90 transition-colors">
-              Make Your First Gift
-            </button>
-            <button className="border-2 border-gold text-gold px-8 py-4 rounded-full font-semibold hover:bg-gold hover:text-primary-ink transition-colors">
-              Learn About Monthly Partnership
-            </button>
           </div>
         </div>
       </section>
