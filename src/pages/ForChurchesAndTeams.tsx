@@ -6,29 +6,6 @@ const ForChurchesAndTeams = () => {
     <div>
       {/* Hero Section */}
       <section className="bg-wheat-bg py-20 relative overflow-hidden">
-        {/* Vine decorative elements */}
-        <div className="absolute inset-0 pointer-events-none">
-          <img 
-            src="/vine.svg" 
-            alt="" 
-            className="absolute left-0 top-1/4 w-32 h-64 opacity-15 transform -translate-x-4"
-            style={{ transform: 'translateX(-20%) translateY(25%) rotate(-10deg)' }}
-          />
-          <img 
-            src="/vine.svg" 
-            alt="" 
-            className="absolute right-0 bottom-1/4 w-24 h-48 opacity-10 transform translate-x-4 rotate-180"
-            style={{ transform: 'translateX(20%) translateY(-25%) rotate(170deg) scaleX(-1)' }}
-          />
-        </div>
-        
-        {/* Decorative elements */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-16 left-8 w-40 h-40 border-2 border-olive/20 rounded-full"></div>
-          <div className="absolute bottom-24 right-12 w-32 h-32 border-2 border-gold/20 rounded-full"></div>
-          <div className="absolute top-1/2 left-1/4 w-20 h-20 border border-olive/30 rounded-full"></div>
-        </div>
-        
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="font-fraunces font-semibold text-4xl lg:text-5xl text-primary-ink mb-6">

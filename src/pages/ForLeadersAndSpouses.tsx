@@ -6,29 +6,6 @@ const ForLeadersAndSpouses = () => {
     <div>
       {/* Hero Section */}
       <section className="bg-wheat-bg py-20">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="font-fraunces font-semibold text-4xl lg:text-5xl text-primary-ink mb-6">
-              For <span className="text-gold">Leaders & Spouses</span>
-            </h1>
-            <h2 className="text-2xl lg:text-3xl text-slate-secondary mb-8 font-medium">
-              Personalized Spiritual Mentorship for Your Journey
-            </h2>
-            <div className="w-16 h-0.5 bg-gold mx-auto mb-8"></div>
-            <p className="text-xl text-slate-secondary max-w-4xl mx-auto leading-relaxed">
-              We provide a constant, faithful, and safe friendship focused on your abiding relationship with Jesus, your leadership, and your family responsibilities.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* How We Walk With You Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-            <div>
-              <h2 className="font-fraunces font-semibold text-3xl text-primary-ink mb-6">
-                A Partnership Focused on Your Health
               </h2>
               <div className="w-16 h-0.5 bg-gold mb-8"></div>
               <p className="text-lg text-slate-secondary leading-relaxed">

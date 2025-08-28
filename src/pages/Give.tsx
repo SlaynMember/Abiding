@@ -85,15 +85,26 @@ const Give = () => {
           </div>
 
           <div className="bg-sky-callout p-8 rounded-2xl">
-            <blockquote className="font-fraunces text-xl lg:text-2xl text-primary-ink mb-6 italic leading-relaxed text-center">
-              "The necessary travel, time, and resourcing for this relationship has always been provided for by Billy and his supporters. I highly endorse and recommend your continued and increased support of this work."
-            </blockquote>
-            <div className="text-center mb-6">
-              <cite className="text-slate-secondary font-medium">— Nathan Kollar, Lead Pastor, GraceLand Church Franklin</cite>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              <div>
+                <blockquote className="font-fraunces text-xl lg:text-2xl text-primary-ink mb-6 italic leading-relaxed">
+                  "The necessary travel, time, and resourcing for this relationship has always been provided for by Billy and his supporters. I highly endorse and recommend your continued and increased support of this work."
+                </blockquote>
+                <div className="mb-6">
+                  <cite className="text-slate-secondary font-medium">— Nathan Kollar, Lead Pastor, GraceLand Church Franklin</cite>
+                </div>
+                <p className="text-lg text-slate-secondary leading-relaxed">
+                  Your gift of any amount directly enables this kind of life-changing, on-the-ground support.
+                </p>
+              </div>
+              <div className="lg:order-first">
+                <img 
+                  src="/src/assets/images/billy-meeting-thailand.jpg" 
+                  alt="Billy meeting with ministry leaders in Thailand" 
+                  className="w-full h-80 object-cover rounded-2xl shadow-lg"
+                />
+              </div>
             </div>
-            <p className="text-lg text-slate-secondary text-center leading-relaxed">
-              Your gift of any amount directly enables this kind of life-changing, on-the-ground support.
-            </p>
           </div>
         </div>
       </section>

@@ -6,30 +6,6 @@ const About = () => {
     <div>
       {/* Hero Section */}
       <section className="bg-wheat-bg py-20">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="font-fraunces font-semibold text-4xl lg:text-5xl text-primary-ink mb-6">
-              Our Story & <span className="text-gold">Our Heart</span>
-            </h1>
-            <div className="w-16 h-0.5 bg-gold mx-auto mb-8"></div>
-            <p className="text-xl text-slate-secondary max-w-4xl mx-auto leading-relaxed">
-              But there's hope. Throughout decades of ministry, we've seen that living as a Christian leader is more than doable—although not without hardship and challenges, it's a life full of joy. Through spiritual parenting, we've witnessed transformation in pastors, elders, and ministry professionals who have learned to operate from their love relationship with Jesus.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Meet Billy & Kelly Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="font-fraunces font-semibold text-3xl text-primary-ink mb-6">
-              Meet Your Mentors
-            </h2>
-            <div className="w-16 h-0.5 bg-gold mx-auto"></div>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Billy Patterson */}
             <div className="bg-wheat-bg p-8 rounded-2xl text-center">
               <div className="w-32 h-32 mx-auto mb-6 overflow-hidden rounded-full">

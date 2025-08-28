@@ -89,30 +89,6 @@ const Resources = () => {
     <div>
       {/* Hero Section */}
       <section className="bg-wheat-bg py-20 relative overflow-hidden">
-        {/* Vine decorative elements */}
-        <div className="absolute inset-0 pointer-events-none">
-          <img 
-            src="/vine.svg" 
-            alt="" 
-            className="absolute left-0 top-16 w-28 h-44 opacity-10"
-            style={{ transform: 'translateX(-35%) rotate(-6deg)' }}
-          />
-          <img 
-            src="/vine.svg" 
-            alt="" 
-            className="absolute right-0 bottom-20 w-24 h-40 opacity-8 scaleX(-1)"
-            style={{ transform: 'translateX(30%) rotate(12deg) scaleX(-1)' }}
-          />
-        </div>
-        
-        {/* Decorative elements */}
-        <div className="absolute inset-0 opacity-6">
-          <div className="absolute top-12 right-16 w-32 h-32 border border-olive/25 rounded-full"></div>
-          <div className="absolute bottom-16 left-12 w-20 h-20 border border-gold/25 rounded-full"></div>
-          <div className="absolute top-1/3 left-1/4 w-12 h-12 border border-olive/30 rounded-full"></div>
-          <div className="absolute bottom-1/3 right-1/4 w-8 h-8 bg-gold/20 rounded-full"></div>
-        </div>
-        
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="font-fraunces font-semibold text-4xl lg:text-5xl text-primary-ink mb-6">
