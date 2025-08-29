@@ -6,6 +6,18 @@ const About = () => {
     <div>
       {/* Hero Section */}
       <section className="bg-wheat-bg py-20">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="font-fraunces font-semibold text-3xl lg:text-4xl text-primary-ink mb-6">
+              Meet Billy & Kelly Patterson
+            </h2>
+            <div className="w-16 h-0.5 bg-gold mx-auto mb-8"></div>
+            <p className="text-lg text-slate-secondary max-w-3xl mx-auto">
+              Together, Billy and Kelly bring decades of ministry experience and a heart for walking alongside pastors and ministry leaders through every season of life and calling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Billy Patterson */}
             <div className="bg-wheat-bg p-8 rounded-2xl text-center">
               <div className="w-32 h-32 mx-auto mb-6 overflow-hidden rounded-full">
