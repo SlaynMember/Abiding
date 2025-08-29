@@ -10,6 +10,11 @@ const About = () => {
             <div className="bg-wheat-bg p-8 rounded-2xl text-center">
               <div className="w-32 h-32 mx-auto mb-6 overflow-hidden rounded-full">
                 <img 
+                  src="/src/assets/images/billy-patterson-headshot.jpg" 
+                  alt="Billy Patterson headshot" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
               <h3 className="font-fraunces font-semibold text-2xl text-primary-ink mb-4">
                 Billy Patterson
               </h3>
