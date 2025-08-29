@@ -39,8 +39,6 @@ const About = () => {
                 Kelly's 37 years of ministry partnership brings a unique perspective on family life in ministry. She plays a crucial role in communications and shaping the ministry's message, while offering special insight and support to ministry spouses navigating the unique challenges of pastoral family life.
               </p>
             </div>
-          </div>
-        </div>
       </section>
 
       {/* Our Philosophy Section */}
