@@ -53,7 +53,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage, setCurrentPage }) => {
             className="flex items-center space-x-3 group"
           >
             <img
-              src="/src/assets/mainlogonotext.svg"
+              src="/mainlogonotext.svg"
               alt="Abiding Partners Logo"
               className="w-14 h-14 group-hover:scale-105 transition-transform duration-200"
             />
