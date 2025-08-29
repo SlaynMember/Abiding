@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, Heart, Users, BookOpen, ArrowRight, Quote } from 'lucide-react';
+import { Heart, Users, BookOpen, Quote } from 'lucide-react';
 
 interface HomeProps {
   setCurrentPage: (page: string) => void;
