@@ -35,9 +35,9 @@ const Home: React.FC<HomeProps> = ({ setCurrentPage }) => {
       <section className="bg-sky-callout py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <blockquote className="font-fraunces text-2xl lg:text-3xl text-olive font-medium italic leading-relaxed">
-            "I do not write these things to shame you, but as my beloved children I warn you. For though you might have ten thousand instructors in Christ, yet you do not have many fathers; for in Christ Jesus I have begotten you through the gospel. Therefore I urge you, imitate me."
+            "For even if you had ten thousand others to teach you about Christ, you have only one spiritual father. For I became your father in Christ Jesus when I preached the good news to you. So I urge you to imitate me."
           </blockquote>
-          <cite className="block mt-4 text-slate-secondary font-medium">1 Corinthians 4:14-16</cite>
+          <cite className="block mt-4 text-slate-secondary font-medium">1 Corinthians 4:15-16</cite>
         </div>
       </section>
 
