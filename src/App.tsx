@@ -1,16 +1,13 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Header from './components/Header';
+import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
 import ForLeadersAndSpouses from './pages/ForLeadersAndSpouses';
 import ForChurchesAndTeams from './pages/ForChurchesAndTeams';
-import Values from './pages/Values';
-import PastorsWeWalkWith from './pages/PastorsWeWalkWith';
-import StoriesTestimonials from './pages/StoriesTestimonials';
 import Resources from './pages/Resources';
 import Give from './pages/Give';
 import Connect from './pages/Connect';
-import Footer from './components/Footer';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -18,19 +15,13 @@ function App() {
   const renderPage = () => {
     switch (currentPage) {
       case 'home':
-        return <Home />;
+        return <Home setCurrentPage={setCurrentPage} />;
       case 'about':
         return <About />;
       case 'our-work-leaders':
         return <ForLeadersAndSpouses />;
       case 'our-work-churches':
         return <ForChurchesAndTeams />;
-      case 'values':
-        return <Values />;
-      case 'pastors':
-        return <PastorsWeWalkWith />;
-      case 'stories':
-        return <StoriesTestimonials />;
       case 'resources':
         return <Resources />;
       case 'give':
@@ -38,14 +29,14 @@ function App() {
       case 'connect':
         return <Connect />;
       default:
-        return <Home />;
+        return <Home setCurrentPage={setCurrentPage} />;
     }
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-wheat-bg flex flex-col">
       <Header currentPage={currentPage} setCurrentPage={setCurrentPage} />
-      <main>
+      <main className="flex-grow">
         {renderPage()}
       </main>
       <Footer setCurrentPage={setCurrentPage} />
