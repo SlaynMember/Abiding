@@ -1,4 +1,4 @@
-import React from 'react';
+// ...existing code...
 
 const About = () => {
   return (
@@ -24,12 +24,12 @@ const About = () => {
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="text-center">
-              <img src="/src/assets/images/billy-patterson-headshot.jpg" alt="Billy Patterson" className="w-48 h-48 rounded-full mx-auto mb-6 shadow-lg object-cover"/>
+              <img src="/images/billy-patterson-headshot.jpg" alt="Billy Patterson" className="w-48 h-48 rounded-full mx-auto mb-6 shadow-lg object-cover"/>
               <h3 className="font-fraunces text-2xl text-primary-ink mb-2">Billy Patterson</h3>
               <p className="text-slate-secondary leading-relaxed">With over 37 years of ministry experience, Billy walks alongside leaders, offering the steady presence and wisdom of a spiritual father. His passion is to see pastors and their families thrive, not just survive, in their calling.</p>
             </div>
             <div className="text-center">
-              <img src="/src/assets/images/kelly-patterson-headshot.jpg" alt="Kelly Patterson" className="w-48 h-48 rounded-full mx-auto mb-6 shadow-lg object-cover"/>
+              <img src="/images/kelly-patterson-headshot.jpg" alt="Kelly Patterson" className="w-48 h-48 rounded-full mx-auto mb-6 shadow-lg object-cover"/>
               <h3 className="font-fraunces text-2xl text-primary-ink mb-2">Kelly Patterson</h3>
               <p className="text-slate-secondary leading-relaxed">Kelly brings a vital perspective on the health of the entire ministry family. She provides support for spouses, shapes the ministry's communications, and ensures that every aspect of Abiding Partners reflects the heart of hospitality and genuine care.</p>
             </div>

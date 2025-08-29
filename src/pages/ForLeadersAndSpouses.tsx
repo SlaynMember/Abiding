@@ -1,4 +1,4 @@
-import React from 'react';
+// ...existing code...
 import { Heart, Users, Shield, Quote } from 'lucide-react';
 
 const ForLeadersAndSpouses = () => {
@@ -71,7 +71,7 @@ const ForLeadersAndSpouses = () => {
        <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <img 
-                src="/src/assets/images/praying-intently.JPG" 
+                src="/images/praying-intently.JPG" 
                 alt="Billy Patterson praying with a group of pastors"
                 className="rounded-2xl shadow-lg mx-auto"
             />

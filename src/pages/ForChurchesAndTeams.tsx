@@ -1,5 +1,5 @@
-import React from 'react';
-import { Users, Target, Lightbulb, Handshake, Quote } from 'lucide-react';
+import { Quote } from 'lucide-react';
+// ...existing code...
 
 const ForChurchesAndTeams = () => {
   return (
@@ -36,6 +36,7 @@ const ForChurchesAndTeams = () => {
               <p className="text-slate-secondary">Intentional discipleship time with your key leaders, either one-on-one or as a group.</p>
             </div>
             <div className="bg-sky-callout p-8 rounded-2xl">
+              // This line has been removed as the import is now at the top.
               <h3 className="font-fraunces font-semibold text-xl text-primary-ink mb-3">Spiritual Parenting for Leaders</h3>
               <p className="text-slate-secondary">Extending mentorship to your eldering leaders to develop a healthy leadership culture.</p>
             </div>
@@ -72,7 +73,7 @@ const ForChurchesAndTeams = () => {
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <img 
-                src="/src/assets/images/kelly-meeting-womens-group.JPG" 
+                src="/images/kelly-meeting-womens-group.JPG" 
                 alt="Kelly Patterson meeting with a group of women leaders"
                 className="rounded-2xl shadow-lg mx-auto"
             />
