@@ -9,11 +9,13 @@ const Home: React.FC<HomeProps> = ({ setCurrentPage }) => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative bg-cover bg-center text-white" style={{ backgroundImage: `url('/src/assets/images/hero-main.jpg')` }}>
+       <section 
+        className="relative bg-cover bg-center text-white" 
+        style={{ backgroundImage: `url('/src/assets/images/hero-main.jpg')` }}>
         <div className="absolute inset-0 bg-primary-ink bg-opacity-60"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-48 text-center">
           <h1 className="font-fraunces font-semibold text-4xl lg:text-6xl text-white mb-6 leading-tight">
-            Leading can be lonely. <br /> <span className="text-yellow-300">You don’t have to do it alone.</span>
+            Leading can be lonely. <br /> <span className="text-gold">You don’t have to do it alone.</span>
           </h1>
           <p className="text-xl max-w-3xl mx-auto mb-8 leading-relaxed text-white/90">
             Spiritual parenting for Christian leaders navigating the pressures of ministry and life.
