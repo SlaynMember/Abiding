@@ -53,7 +53,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage, setCurrentPage }) => {
             className="flex items-center space-x-3 group"
           >
             <img
-              src="/src/assets/images/dovelogo.webp"
+              src="/src/assets/mainlogonotext.svg"
               alt="Abiding Partners Logo"
               className="w-14 h-14 group-hover:scale-105 transition-transform duration-200"
             />
@@ -67,10 +67,23 @@ const Header: React.FC<HeaderProps> = ({ currentPage, setCurrentPage }) => {
           <nav className="hidden lg:flex items-center space-x-8">
             <button onClick={() => handleNavClick('home')} className={`text-sm font-medium transition-colors ${currentPage === 'home' ? 'text-gold' : 'text-slate-secondary hover:text-primary-ink'}`}>Home</button>
             <button onClick={() => handleNavClick('about')} className={`text-sm font-medium transition-colors ${currentPage === 'about' ? 'text-gold' : 'text-slate-secondary hover:text-primary-ink'}`}>About</button>
-            <div className="relative" onMouseEnter={() => setIsWorkMenuOpen(true)} onMouseLeave={() => setIsWorkMenuOpen(false)}>
-              <button className={`text-sm font-medium transition-colors ${currentPage.startsWith('our-work') ? 'text-gold' : 'text-slate-secondary hover:text-primary-ink'}`}>Our Work</button>
+            <div
+              className="relative flex items-center"
+              onMouseEnter={() => setIsWorkMenuOpen(true)}
+              onMouseLeave={() => setIsWorkMenuOpen(false)}
+            >
+              <button
+                className={`text-sm font-medium transition-colors h-10 flex items-center ${currentPage.startsWith('our-work') ? 'text-gold' : 'text-slate-secondary hover:text-primary-ink'}`}
+                style={{ minHeight: '2.5rem' }}
+              >
+                Our Work
+              </button>
               {isWorkMenuOpen && (
-                <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1">
+                <div
+                  className="absolute top-full left-0 w-48 bg-white rounded-md shadow-lg py-1"
+                  onMouseEnter={() => setIsWorkMenuOpen(true)}
+                  onMouseLeave={() => setIsWorkMenuOpen(false)}
+                >
                   <button onClick={() => handleNavClick('our-work-leaders')} className="block w-full text-left px-4 py-2 text-sm text-slate-secondary hover:bg-gray-100">For Leaders & Spouses</button>
                   <button onClick={() => handleNavClick('our-work-churches')} className="block w-full text-left px-4 py-2 text-sm text-slate-secondary hover:bg-gray-100">For Churches & Teams</button>
                 </div>

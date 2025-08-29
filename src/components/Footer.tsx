@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, Heart, Mail, MapPin } from 'lucide-react';
+import { Phone, Heart, MapPin } from 'lucide-react';
 
 interface FooterProps {
   setCurrentPage: (page: string) => void;
@@ -90,8 +90,7 @@ const Footer: React.FC<FooterProps> = ({ setCurrentPage }) => {
                   onClick={() => setCurrentPage('connect')}
                   className="flex items-center space-x-2 text-gray-300 hover:text-gold transition-colors"
                 >
-                  <Mail size={16} />
-                  <span>Subscribe to weekly encouragement</span>
+                    {/* ...existing code... */}
                 </button>
               </li>
             </ul>
